@@ -1,0 +1,113 @@
+body {
+    background-color: rgba(155, 350, 162, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.clock-container {
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .75);
+    position: relative;
+}
+
+.clock-container .numbers {
+    --degrees: 0deg;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    transform: rotate(var(--degrees));
+}
+
+.clock-container .hand {
+    --hand-degrees: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(calc(var(--hand-degrees) * 1deg));
+    border: 1px solid white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    z-index: 10;
+}
+
+.clock-container::before {
+    content: '';
+    z-index: 11;
+    height: 15px;
+    width: 15px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clock-container .hand.hand-seconds {
+    width: 3px;
+    height: 45%;
+    background-color: red;
+}
+
+.clock-container .hand.hand-minutes {
+    width: 5px;
+    height: 40%;
+    background-color: black;
+}
+
+.clock-container .hand.hand-hour {
+    width: 7px;
+    height: 30%;
+    background-color: black;
+}
+
+.clock-container .numbers.number1 {
+    --degrees: 30deg;
+}
+
+.clock-container .numbers.number2 {
+    --degrees: 60deg;
+}
+
+.clock-container .numbers.number3 {
+    --degrees: 90deg;
+}
+
+.clock-container .numbers.number4 {
+    --degrees: 120deg;
+}
+
+.clock-container .numbers.number5 {
+    --degrees: 150deg;
+}
+
+.clock-container .numbers.number6 {
+    --degrees: 180deg;
+}
+
+.clock-container .numbers.number7 {
+    --degrees: 210deg;
+}
+
+.clock-container .numbers.number8 {
+    --degrees: 240deg;
+}
+
+.clock-container .numbers.number9 {
+    --degrees: 270deg;
+}
+
+.clock-container .numbers.number10 {
+    --degrees: 300deg;
+}
+
+.clock-container .numbers.number11 {
+    --degrees: 330deg;
+}
